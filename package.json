@@ -1,11 +1,11 @@
 {
   "name": "website",
   "private": true,
-  "description": "https://www.xingkang.wang",
-  "version": "0.1.0",
+  "description": "myself website",
+  "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 8080",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
