@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `阿康的个人站`,
+    author: `wangxingkang`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://xingkang.wang`,
     social: {
-      twitter: `kylemathews`,
+      twitter: 'https://twitter.com/wangxingkang',
+      weibo: 'https://weibo.com/u/2868930601',
+      github: 'https://github.com/wangxingkang',
+      yuque: 'https://www.yuque.com/wangxingkang',
+      zhihu: 'https://www.zhihu.com/people/wangxingkang'
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        javascriptEnabled: true
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,6 +31,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: `srcAssets`,
       },
     },
     {
@@ -45,8 +62,21 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-antd`,
+      options: {
+        style: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -57,15 +87,10 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/assets/profile.jpeg`,
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typescript`,
-      options: {}
-    },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-react-helmet`
   ],
 }
