@@ -1,29 +1,36 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '@/components/layout';
+import { Link } from 'gatsby';
+import { Result, Button, Layout } from 'antd';
+import Helmet from '@/components/Helmet';
+import UFooter from '@/components/Footer';
+import styles from './404.module.less';
 
-class NotFoundPage extends React.Component<any> {
+const Content = Layout.Content;
+const Footer = Layout.Footer;
+
+class NotFoundPage extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Layout className={styles.main}>
+        <Content>
+          <Helmet title="404" />
+          <Result
+            status="404"
+            title="404"
+            subTitle="抱歉，你访问的页面不存在。"
+            extra={
+              <Link to="/">
+                <Button type="primary">返回首页</Button>
+              </Link>
+            }
+          />
+        </Content>
+        <Footer>
+          <UFooter />
+        </Footer>
       </Layout>
     )
   }
 }
 
 export default NotFoundPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

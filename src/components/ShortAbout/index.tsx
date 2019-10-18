@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { Avatar } from 'antd';
 import Image, { FluidObject } from 'gatsby-image';
 import styles from './index.module.less';
 
@@ -16,6 +16,7 @@ interface IProps {
 
 const ShortAbout: React.FC<IProps> = (props) => {
   const { fluid, author, socialInfoList } = props;
+
   return (
     <div className={styles.main}>
       <div className={styles.avatar}>
@@ -28,7 +29,7 @@ const ShortAbout: React.FC<IProps> = (props) => {
         {socialInfoList.map(item => {
           return (
             <a key={item.icon} target="_blank" href={item.url}>
-              <Icon type={item.icon} />
+              <Avatar icon={item.icon} />
             </a>
           )
         })}

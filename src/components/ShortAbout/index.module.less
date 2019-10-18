@@ -1,4 +1,4 @@
-@import "~antd/lib/style/themes/default";
+@import "../../styles/theme";
 
 .main {
   position: relative;
@@ -8,7 +8,7 @@
   box-sizing: border-box;
   padding: 15px 15px 0;
   text-align: center;
-  color: #683741;
+  color: @text-color;
 }
 
 .avatar {
@@ -28,7 +28,7 @@
 
   :global {
     .anticon {
-      color: #683741;
+      color: @white;
       font-size: 1.3rem;
     }
   }

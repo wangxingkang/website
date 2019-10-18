@@ -1,0 +1,21 @@
+@import "../styles/theme";
+@import "~antd/lib/style/mixins/clearfix";
+
+.main {
+  position: relative;
+  max-width: @container-width;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  .clearfix();
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .aside {
+    width: 100%;
+  }
+}

@@ -1,8 +1,10 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 import Helmet from '@/components/Helmet';
 import { graphql } from 'gatsby';
 import ShortAbout, { ISocialInfo } from '@/components/ShortAbout';
 import { File, Site, Social } from '@/graphql-types';
+import styles from './index.module.less';
 
 interface IProps {
   data: {
@@ -28,15 +30,23 @@ const IndexPage: React.FC<IProps> = (props) => {
     })
 
   return (
-    <div>
+    <div className={styles.main}>
       <Helmet title="首页" />
-      Index Page
-      <div style={{ width: 240 }}>
-        <ShortAbout
-          fluid={file.childImageSharp.fluid}
-          author={site.siteMetadata.author}
-          socialInfoList={socialInfoList}
-        />
+      <div className={styles.container}>
+        <Row>
+          <Col span={18}>
+            123
+          </Col>
+          <Col span={6}>
+            <div className={styles.aside}>
+              <ShortAbout
+                fluid={file.childImageSharp.fluid}
+                author={site.siteMetadata.author}
+                socialInfoList={socialInfoList}
+              />
+            </div>
+          </Col>
+        </Row>
       </div>
     </div>
   )
