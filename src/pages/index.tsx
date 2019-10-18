@@ -32,6 +32,14 @@ const IndexPage: React.FC<IProps> = (props) => {
   return (
     <div className={styles.main}>
       <Helmet title="首页" />
+      <header className={styles.header}>
+        <div className={styles.headerContainer}>
+          <h1>{site.siteMetadata.title}</h1>
+          <span className="subheading">
+            静下心来敲一行代码
+          </span>
+        </div>
+      </header>
       <div className={styles.container}>
         <Row>
           <Col span={18}>
@@ -67,6 +75,7 @@ export const query = graphql`
     },
     site {
       siteMetadata {
+        title
         author
         social {
           twitter
