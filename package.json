@@ -1,68 +1,25 @@
 {
   "name": "website",
   "private": true,
-  "description": "阿康的个人站",
-  "version": "0.1.0",
-  "author": "wangxingkang <wang_xingkang@qq.com>",
-  "bugs": {
-    "url": "https://github.com/wangxingkang/website/issues"
-  },
-  "homepage": "https://github.com/wangxingkang/website#readme",
-  "keywords": [
-    "blog"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wangxingkang/website-blog.git"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "bootstarp": "yarn || npm i",
-    "build": "gatsby build",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "gatsby develop --port 8000 --open",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "dependencies": {
-    "antd": "^3.24.1",
-    "classnames": "^2.2.6",
-    "gatsby": "^2.16.1",
-    "gatsby-image": "^2.2.29",
-    "gatsby-plugin-antd": "^2.0.2",
-    "gatsby-plugin-feed": "^2.3.18",
-    "gatsby-plugin-google-analytics": "^2.1.23",
-    "gatsby-plugin-less": "^3.0.12",
-    "gatsby-plugin-manifest": "^2.2.23",
-    "gatsby-plugin-offline": "^3.0.16",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sharp": "^2.2.31",
-    "gatsby-plugin-typescript": "^2.1.15",
-    "gatsby-remark-copy-linked-files": "^2.1.28",
-    "gatsby-remark-images": "^3.1.28",
-    "gatsby-remark-prismjs": "^3.3.20",
-    "gatsby-remark-responsive-iframe": "^2.2.25",
-    "gatsby-remark-smartypants": "^2.1.14",
-    "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-transformer-remark": "^2.6.30",
-    "gatsby-transformer-sharp": "^2.2.23",
-    "prismjs": "^1.17.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "^16.9.2",
-    "@types/react-helmet": "^5.0.12",
-    "@walrus/cli": "^0.0.6",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.6.4",
-    "webpack": "^4.41.2"
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@tsconfig/svelte": "^5.0.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "svelte": "^4.2.8",
+    "svelte-check": "^3.6.2",
+    "tailwindcss": "^3.4.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   }
 }
